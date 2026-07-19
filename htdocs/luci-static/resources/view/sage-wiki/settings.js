@@ -3,7 +3,7 @@
 'require uci';
 'require view';
 
-// sage-wiki 设置页面
+// sage-wiki settings page
 return view.extend({
     load: function() {
         return uci.load('sage-wiki');
@@ -15,6 +15,9 @@ return view.extend({
         m = new form.Map('sage-wiki', _('sage-wiki'), _(
             'LLM-compiled personal knowledge base that compiles documents into a structured wiki.'
         ));
+
+        // 保存 map 引用,供 handleSave 使用
+        this.map = m;
 
         s = m.section(form.TypedSection, 'main', _('Basic Settings'));
         s.anonymous = true;
@@ -38,6 +41,11 @@ return view.extend({
         o.value('openai-compatible', _('OpenAI-compatible endpoint'));
         o.placeholder = 'gemini';
 
+        o = s.option(form.Value, 'model', _('Model name'), _(
+            'Leave empty to use the provider default model.'
+        ));
+        o.placeholder = 'gemini-2.5-flash';
+
         o = s.option(form.Value, 'api_key', _('API key'));
         o.password = true;
         o.rmempty = true;
@@ -48,5 +56,13 @@ return view.extend({
         o.rmempty = false;
 
         return m;
+    },
+
+    // 保存后重启服务
+    handleSaveApply: function(ev, mode) {
+        return this.map.save().then(function() {
+            // 通过 LuCI 的 fs.exec 调用 /etc/init.d/sage-wiki restart
+            return fs.exec('/etc/init.d/sage-wiki', ['restart']);
+        });
     }
 });

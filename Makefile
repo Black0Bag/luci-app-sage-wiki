@@ -1,7 +1,3 @@
-# LuCI 界面支持包:为 sage-wiki 提供 Web 管理界面
-# 作为独立 feed 仓库,本 Makefile 不依赖 luci.mk
-# 参考 immortalwrt/luci 的 luci.mk 核心逻辑,使用标准 package.mk
-
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-sage-wiki
@@ -16,8 +12,8 @@ LUCI_PKGARCH:=all
 
 define Package/luci-app-sage-wiki
   SECTION:=luci
-  CATEGORY:=LuCI
-  SUBMENU:=5. Applications
+  CATEGORY:=Network
+  SUBMENU:=Web Servers/Proxies
   TITLE:=$(LUCI_TITLE)
   DEPENDS:=+luci-base +sage-wiki
   PKGARCH:=$(LUCI_PKGARCH)
@@ -29,7 +25,6 @@ define Package/luci-app-sage-wiki/description
   configuration. Simplified Chinese translation included.
 endef
 
-# 纯前端 LuCI 应用,不需要编译
 define Build/Prepare
 endef
 
@@ -52,7 +47,6 @@ endef
 define Package/luci-app-sage-wiki/postinst
 #!/bin/sh
 [ -n "$$IPKG_INSTROOT" ] && exit 0
-# 确保 LuCI 资源目录存在并触发 CBI 缓存刷新
 rm -f /tmp/luci-indexcache
 exit 0
 endef

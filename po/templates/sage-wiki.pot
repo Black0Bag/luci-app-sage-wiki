@@ -37,6 +37,12 @@ msgstr ""
 msgid "OpenAI-compatible endpoint"
 msgstr ""
 
+msgid "Model name"
+msgstr ""
+
+msgid "Leave empty to use the provider default model."
+msgstr ""
+
 msgid "API key"
 msgstr ""
 

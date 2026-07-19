@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "sage-wiki"
+msgstr "sage-wiki 知识库"
+
+msgid "LLM-compiled personal knowledge base that compiles documents into a structured wiki."
+msgstr "由 LLM 驱动的个人知识库,可将文档自动编译为结构化 Wiki。"
+
+msgid "Basic Settings"
+msgstr "基本设置"
+
+msgid "Enable service"
+msgstr "启用服务"
+
+msgid "Run sage-wiki as a daemon process."
+msgstr "将 sage-wiki 作为守护进程运行。"
+
+msgid "Listen port"
+msgstr "监听端口"
+
+msgid "LLM provider"
+msgstr "LLM 服务商"
+
+msgid "Google Gemini"
+msgstr "Google Gemini"
+
+msgid "OpenAI"
+msgstr "OpenAI"
+
+msgid "Anthropic Claude"
+msgstr "Anthropic Claude"
+
+msgid "Ollama (local)"
+msgstr "Ollama(本地)"
+
+msgid "OpenAI-compatible endpoint"
+msgstr "OpenAI 兼容接口"
+
+msgid "Model name"
+msgstr "模型名称"
+
+msgid "Leave empty to use the provider default model."
+msgstr "留空则使用服务商默认模型。"
+
+msgid "API key"
+msgstr "API 密钥"
+
+msgid "Enable Web UI"
+msgstr "启用 Web UI"
+
+msgid "Only effective when the binary was compiled with the webui build tag."
+msgstr "仅当二进制文件以 webui 编译标签构建时有效。"
+
+msgid "Watch for file changes"
+msgstr "监听文件变化"
+
+msgid "Automatically recompile the wiki when documents change."
+msgstr "文档变化时自动重新编译 Wiki。"

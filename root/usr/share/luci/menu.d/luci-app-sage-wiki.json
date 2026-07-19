@@ -1,0 +1,15 @@
+{
+    "admin/services/sage-wiki": {
+        "title": "sage-wiki 知识库",
+        "order": 90,
+        "action": {
+            "type": "view",
+            "path": "sage-wiki/settings"
+        },
+        "depends": {
+            "acl": {
+                "services": ["read"]
+            }
+        }
+    }
+}

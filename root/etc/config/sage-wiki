@@ -1,0 +1,10 @@
+# 由 luci-app-sage-wiki 管理的配置项(与服务包共享)
+
+config sage-wiki 'main'
+    option enabled '0'
+    option port '3333'
+    option provider 'gemini'
+    option model ''
+    option api_key ''
+    option webui '1'
+    option watch '1'

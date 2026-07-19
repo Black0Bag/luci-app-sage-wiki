@@ -1,0 +1,59 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "sage-wiki"
+msgstr ""
+
+msgid "LLM-compiled personal knowledge base that compiles documents into a structured wiki."
+msgstr ""
+
+msgid "Basic Settings"
+msgstr ""
+
+msgid "Enable service"
+msgstr ""
+
+msgid "Run sage-wiki as a daemon process."
+msgstr ""
+
+msgid "Listen port"
+msgstr ""
+
+msgid "LLM provider"
+msgstr ""
+
+msgid "Google Gemini"
+msgstr ""
+
+msgid "OpenAI"
+msgstr ""
+
+msgid "Anthropic Claude"
+msgstr ""
+
+msgid "Ollama (local)"
+msgstr ""
+
+msgid "OpenAI-compatible endpoint"
+msgstr ""
+
+msgid "Model name"
+msgstr ""
+
+msgid "Leave empty to use the provider default model."
+msgstr ""
+
+msgid "API key"
+msgstr ""
+
+msgid "Enable Web UI"
+msgstr ""
+
+msgid "Only effective when the binary was compiled with the webui build tag."
+msgstr ""
+
+msgid "Watch for file changes"
+msgstr ""
+
+msgid "Automatically recompile the wiki when documents change."
+msgstr ""

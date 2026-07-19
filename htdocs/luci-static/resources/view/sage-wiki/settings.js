@@ -3,7 +3,7 @@
 'require uci';
 'require view';
 
-// sage-wiki settings page
+// sage-wiki 设置页面
 return view.extend({
     load: function() {
         return uci.load('sage-wiki');
@@ -38,11 +38,6 @@ return view.extend({
         o.value('openai-compatible', _('OpenAI-compatible endpoint'));
         o.placeholder = 'gemini';
 
-        o = s.option(form.Value, 'model', _('Model name'), _(
-            'Leave empty to use the provider default model.'
-        ));
-        o.placeholder = 'gemini-2.5-flash';
-
         o = s.option(form.Value, 'api_key', _('API key'));
         o.password = true;
         o.rmempty = true;
@@ -52,20 +47,6 @@ return view.extend({
         ));
         o.rmempty = false;
 
-        o = s.option(form.Flag, 'watch', _('Watch for file changes'), _(
-            'Automatically recompile the wiki when documents change.'
-        ));
-        o.rmempty = false;
-
         return m;
-    },
-
-    handleSave: function(ev, mode) {
-        var map = this.map;
-        return map.save().then(function() {
-            luci.get('init.d').then(function(initd) {
-                initd.exec('sage-wiki', 'restart');
-            });
-        });
     }
 });

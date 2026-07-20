@@ -34,6 +34,9 @@ msgstr ""
 msgid "Ollama (local)"
 msgstr ""
 
+msgid "Qwen / DashScope (Alibaba Cloud)"
+msgstr ""
+
 msgid "OpenAI-compatible endpoint"
 msgstr ""
 
@@ -46,8 +49,19 @@ msgstr ""
 msgid "API key"
 msgstr ""
 
+msgid "Custom base URL"
+msgstr ""
+
+msgid ""
+"Optional. Override the provider API endpoint, e.g. for OpenAI-compatible "
+"providers (OpenRouter, Azure), Ollama remote host, or custom proxy."
+msgstr ""
+
 msgid "Enable Web UI"
 msgstr ""
 
-msgid "Only effective when the binary was compiled with the webui build tag."
+msgid ""
+"Only effective when the sage-wiki binary was compiled with "
+"CONFIG_SAGE_WIKI_WEBUI=y. If the binary was built CLI-only, the init script "
+"will log a warning and serve in MCP/stdio mode."
 msgstr ""

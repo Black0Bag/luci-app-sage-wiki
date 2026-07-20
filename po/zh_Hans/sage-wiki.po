@@ -9,7 +9,7 @@ msgid "sage-wiki"
 msgstr "sage-wiki 知识库"
 
 msgid "LLM-compiled personal knowledge base that compiles documents into a structured wiki."
-msgstr "由 LLM 驱动的个人知识库,可将文档自动编译为结构化 Wiki。"
+msgstr "由 LLM 驱动的个人知识库，可将文档自动编译为结构化 Wiki。"
 
 msgid "Basic Settings"
 msgstr "基本设置"
@@ -36,7 +36,10 @@ msgid "Anthropic Claude"
 msgstr "Anthropic Claude"
 
 msgid "Ollama (local)"
-msgstr "Ollama(本地)"
+msgstr "Ollama（本地）"
+
+msgid "Qwen / DashScope (Alibaba Cloud)"
+msgstr "通义千问 / 阿里云 DashScope"
 
 msgid "OpenAI-compatible endpoint"
 msgstr "OpenAI 兼容接口"
@@ -50,8 +53,19 @@ msgstr "留空则使用服务商默认模型。"
 msgid "API key"
 msgstr "API 密钥"
 
+msgid "Custom base URL"
+msgstr "自定义 API 端点（Base URL）"
+
+msgid ""
+"Optional. Override the provider API endpoint, e.g. for OpenAI-compatible "
+"providers (OpenRouter, Azure), Ollama remote host, or custom proxy."
+msgstr "可选。覆盖服务商默认 API 端点，适用于 OpenAI 兼容服务（OpenRouter、Azure）、远程 Ollama 主机或自定义代理。"
+
 msgid "Enable Web UI"
 msgstr "启用 Web UI"
 
-msgid "Only effective when the binary was compiled with the webui build tag."
-msgstr "仅当二进制文件以 webui 编译标签构建时有效。"
+msgid ""
+"Only effective when the sage-wiki binary was compiled with "
+"CONFIG_SAGE_WIKI_WEBUI=y. If the binary was built CLI-only, the init script "
+"will log a warning and serve in MCP/stdio mode."
+msgstr "仅当 sage-wiki 二进制以 CONFIG_SAGE_WIKI_WEBUI=y 编译时有效；若以 CLI 模式编译，init 脚本会打印警告并以 MCP/stdio 模式运行。"
